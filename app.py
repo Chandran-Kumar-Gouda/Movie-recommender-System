@@ -23,8 +23,9 @@ def load_similarity():
 
 
 # Function to download the similarity file
+# Function to download the similarity file
 def load_similarity():
-    url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+    url = "https://drive.google.com/uc?id=1KsXDFLmb1vJ13npJ76KUyfWNDD441VfZ"  # Corrected direct download link
     output = "similarity.pkl"
     gdown.download(url, output, quiet=False)
     return pickle.load(open(output, 'rb'))
