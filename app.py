@@ -2,7 +2,6 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
-import gdown
 
 
 # Function to fetch movie poster
@@ -42,7 +41,7 @@ def recommend(movie):
 # Streamlit UI
 st.set_page_config(page_title="Movie Recommender", layout="wide")
 
-st.title("🌟 Movie Recommender System 🎬")
+st.title(" Movie Recommender System ")
 st.sidebar.title("🔍 Explore")
 page = st.sidebar.radio("Navigate", ["Home", "Recommendations"])
 
@@ -62,7 +61,7 @@ elif page == "Recommendations":
         if not names:
             st.error("No recommendations found!")
         else:
-            st.write("## 🎭 Recommended Movies")
+            st.write("## Recommended Movies")
             movie_cols = st.columns(len(names))
 
             for i, col in enumerate(movie_cols):
