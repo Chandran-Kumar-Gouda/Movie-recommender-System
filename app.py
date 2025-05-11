@@ -89,3 +89,6 @@ elif page == "Recommendations":
                 with col:
                     st.image(posters[i])  # Removed use_container_width for compatibility
                     st.caption(names[i])
+
+
+
