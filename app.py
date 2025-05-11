@@ -14,26 +14,9 @@ def fetch_poster(movie_id):
         'poster_path') else "https://via.placeholder.com/500x750?text=No+Image"
 
 
-# Function to download the similarity file
-def load_similarity():
-    url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
-    output = "similarity.pkl"
-    gdown.download(url, output, quiet=False)
-    return pickle.load(open(output, 'rb'))
-
-
-# Function to download the similarity file
-# Function to download the similarity file
-def load_similarity():
-    url = "https://drive.google.com/uc?id=1KsXDFLmb1vJ13npJ76KUyfWNDD441VfZ"  # Corrected direct download link
-    output = "similarity.pkl"
-    gdown.download(url, output, quiet=False)
-    return pickle.load(open(output, 'rb'))
-
-# Load data
-similarity = load_similarity()
-movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
-movies = pd.DataFrame(movies_dict)
+st.header('Movie Recommender System')
+movies = pickle.load(open('model/movie_list.pkl','rb'))
+similarity = pickle.load(open('model/similarity.pkl','rb'))
 
 
 # Recommendation function
